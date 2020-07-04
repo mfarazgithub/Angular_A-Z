@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <app-gamecontroller (intervalClicked)="catchIntervalValue($event)"></app-gamecontroller>
+      <hr>
+      <div *ngFor="let val of myNumbers">
+        <app-odd [myNumber]="val" style="color: red">
+          <p *ngIf="val % 2==1">Odd - {{ val }}</p>
+        </app-odd>
+        <app-even [myNumber]="val" style="color: blue">
+          <p *ngIf="val % 2==0">Even - {{ val }}</p>
+        </app-even>
+      </div>
+    </div>
+  </div>
+</div>

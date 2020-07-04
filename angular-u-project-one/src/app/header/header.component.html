@@ -1,0 +1,29 @@
+<nav class="navbar navbar-default"> <!-- This gives your page a top bar-->
+    <div class="container-fluid"> <!-- This is for some alignment only-->
+        <div class="navbar-header">  <!-- This is for some header behavior for responsiveness -->
+            <button type="button" class="navbar-toggle" (click)="collapsed = !collapsed"> <!-- Maybe its always on left -->
+                <span class="icon-bar" *ngFor="let iconBar of [1, 2, 3]"></span> <!-- For icon bar-->
+            </button>
+            <a routerLink="/" class="navbar-brand">Recipe Book</a> <!-- This is for header text style -->
+        </div>
+        <div class="navbar-collapse" [class.collapse]="collapsed" (window:resize)="collapsed = true">
+                <!-- navbar-collapse will hide menu item with the screen is narrowed. -->
+            <ul class="nav navbar-nav"> <!-- Like for header styling. This is for menu botton styling -->
+                <li><a href="#">Recipes</a></li>
+                <li><a href="#">Shopping List</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right"> <!-- This section is to put thing on right -->
+                <li class="dropdown"> <!-- This is for dropdown styling -->
+                    <a href="#" class="dropdown-toggle" role="button">Manage <span class="caret"></span></a>
+                    <ul class="dropdown-menu">                     <!-- This span is to put a dropdown arrow -->
+                        <!-- This dropdown-menu is for dropdown option. -->
+                        <li><a href="#">Save Data</a></li>
+                        <li><a href="#">Fetch Data</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Everything is here for a reason. -->
