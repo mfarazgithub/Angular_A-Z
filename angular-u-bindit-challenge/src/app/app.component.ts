@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'bind-it';
   myNumbers: number[] = [];
-  oddNumbers: number[] = [];
+  oddNumbers: number[] = []; 
 
   catchIntervalValue(myNumber: number)
   {
