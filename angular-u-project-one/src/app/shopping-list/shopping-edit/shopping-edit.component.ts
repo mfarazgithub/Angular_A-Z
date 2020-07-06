@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef, EventEmitter, Output } from '@angular/core';
+import { Ingredient } from 'src/app/shared/ingredient.model';
+import { ArgumentOutOfRangeError } from 'rxjs';
 
 @Component({
   selector: 'app-shopping-edit',
@@ -7,9 +9,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ShoppingEditComponent implements OnInit {
 
-  constructor() { }
+@ViewChild('nameInput') nameInputRef: ElementRef;
+@ViewChild('amountInput') amountInputRef: ElementRef;
+
+@Output('ingredientAdded') ingredientAdded= new EventEmitter<Ingredient>();
+
+constructor() { }
 
   ngOnInit(): void {
   }
 
+  onAddClick()
+  {
+    this.ingredientAdded.emit(
+      new Ingredient(this.nameInputRef.nativeElement.value, 
+      this.amountInputRef.nativeElement.value));
+  }
 }

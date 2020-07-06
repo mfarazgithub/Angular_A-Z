@@ -9,8 +9,8 @@
         <div class="navbar-collapse" [class.collapse]="collapsed" (window:resize)="collapsed = true">
                 <!-- navbar-collapse will hide menu item with the screen is narrowed. -->
             <ul class="nav navbar-nav"> <!-- Like for header styling. This is for menu botton styling -->
-                <li><a href="#">Recipes</a></li>
-                <li><a href="#">Shopping List</a></li>
+                <li><a href="#"(click)="onSelect('recipe')">Recipes</a></li>
+                <li><a href="#" (click)="onSelect('shopping-list')">Shopping List</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right"> <!-- This section is to put thing on right -->
                 <li class="dropdown"> <!-- This is for dropdown styling -->
