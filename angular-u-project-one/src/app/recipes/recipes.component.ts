@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Recipe } from './recipe.model';
-import { ProviderAst } from '@angular/compiler';
 import { RecipeService } from './recipe.service';
 
 @Component({
