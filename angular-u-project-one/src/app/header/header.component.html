@@ -7,7 +7,7 @@
             <a routerLink="/" class="navbar-brand">Recipe Book</a> <!-- This is for header text style -->
         </div>
         <div class="navbar-collapse" [class.collapse]="collapsed" (window:resize)="collapsed = true">
-                <!-- navbar-collapse will hide menu item with the screen is narrowed. -->
+                <!-- navbar-collapse will hide menu item when the screen is narrowed. -->
             <ul class="nav navbar-nav"> <!-- Like for header styling. This is for menu botton styling -->
                 <li><a href="#"(click)="onSelect('recipe')">Recipes</a></li>
                 <li><a href="#" (click)="onSelect('shopping-list')">Shopping List</a></li>
